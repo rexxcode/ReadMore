@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read More Untuk Artikel</title>
+    <style>
+        #container {
+            width: 600px;
+            margin: 50px auto;
+        }
+
+        h3 {
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 5px;
+            font-weight: 400;
+        }
+
+        #content-body {
+            max-height: 200px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .expand {
+            max-height: none !important;
+            overflow: hidden !important;
+        }
+
+        #btn-read-more {
+            background: none;
+            border: none;
+            padding: 0;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #btn-read-more:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="content">
+            <div id="content-body">
+                <h3>Rexxcode</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+                    nemo fuga exercitationem delectus
+                    iste ratione odit ipsam enim ab tenetur.
+                </p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita nihil voluptatem ex ullam corporis
+                    laborum fuga, deserunt aut soluta architecto.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, alias, et nihil expedita non eaque
+                    dolorem ullam totam sit quas repellendus molestias sint repudiandae. Ullam, facere optio doloremque
+                    delectus eius assumenda. Blanditiis ex modi consequatur officia doloremque omnis commodi ducimus,
+                    eveniet, obcaecati alias ipsum maiores animi totam est nisi assumenda?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, alias, et nihil expedita non eaque
+                    dolorem ullam totam sit quas repellendus molestias sint repudiandae. Ullam, facere optio doloremque
+                    delectus eius assumenda. Blanditiis ex modi consequatur officia doloremque omnis commodi ducimus,
+                    eveniet, obcaecati alias ipsum maiores animi totam est nisi assumenda?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, alias, et nihil expedita non eaque
+                    dolorem ullam totam sit quas repellendus molestias sint repudiandae. Ullam, facere optio doloremque
+                    delectus eius assumenda. Blanditiis ex modi consequatur officia doloremque omnis commodi ducimus,
+                    eveniet, obcaecati alias ipsum maiores animi totam est nisi assumenda?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea, alias, et nihil expedita non eaque
+                    dolorem ullam totam sit quas repellendus molestias sint repudiandae. Ullam, facere optio doloremque
+                    delectus eius assumenda. Blanditiis ex modi consequatur officia doloremque omnis commodi ducimus,
+                    eveniet, obcaecati alias ipsum maiores animi totam est nisi assumenda?
+                </p>
+            </div>
+            <div class="read-more">
+                <button id="btn-read-more">Read More</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        const contentBody = document.getElementById('content-body')
+        const btnReadMore = document.getElementById('btn-read-more')
+
+        btnReadMore.addEventListener("click", function (e) {
+            contentBody.classList.toggle("expand");
+            gantiTextButton()
+        })
+
+
+        function gantiTextButton() {
+            if (contentBody.classList.contains('expand')) {
+                btnReadMore.innerHTML = 'Tutup'
+            } else {
+                btnReadMore.innerHTML = 'Read More'
+            }
+        }
+    </script>
+
+</body>
+
+</html>
